@@ -1,7 +1,7 @@
 package sample;
 
 public class StudyGroup {
-    private enum studyGroup{
+    public enum studyGroup{
         Lectures,
         Practice,
         Laboratories
@@ -53,44 +53,48 @@ public class StudyGroup {
 
 
     public class classDate{
-        public String day;
-        public String startTime;
-        public String endTime;
-        public classDate(String day, String startTime, String endTime) {
+
+        public int day;
+        public int startTime;
+        public int duration;
+
+        public classDate(int day, int startTime, int duration) {
             this.day = day;
             this.startTime = startTime;
-            this.endTime = endTime;
+            this.duration = duration;
         }
 
-        public String getDay() {
+        public int getDay() {
             return day;
         }
 
-        public void setDay(String day) {
+        public void setDay(int day) {
             this.day = day;
         }
 
-        public String getStartTime() {
-            return startTime;
+        public int getDuration() {
+            return duration;
         }
 
-        public void setStartTime(String startTime) {
+        public void setStartTime(int startTime) {
             this.startTime = startTime;
         }
 
-        public String getEndTime() {
-            return endTime;
+        public int getStartTime() {
+            return startTime;
         }
 
-        public void setEndTime(String endTime) {
-            this.endTime = endTime;
+        public void setDuration(int duration) {
+            this.duration = duration;
         }
 
 
     }
     public class location{
+
         public int buildingNum;
         public int classNum;
+
         public location(int buildingNum, int classNum) {
             this.buildingNum = buildingNum;
             this.classNum = classNum;

@@ -7,6 +7,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main extends Application {
 
     @Override
@@ -20,5 +23,17 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+        IScheduleAlgorithm isa = new mySchedulingAlgorithm();
+        TimeTableBuilder ttb = new TimeTableBuilder(isa);
+        List<Course> myCourses = getCourses();
+        for (Course c : myCourses){
+            ttb.addCourse(c);
+        }
+        Course[][] table = ttb.build();
+    }
+
+    public static List<Course> getCourses(){
+        List<Course> courses = new ArrayList<>();
+        return courses;
     }
 }
