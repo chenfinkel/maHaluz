@@ -1,5 +1,3 @@
-package sample;
-
 public class StudyGroup {
     private enum studyGroup{
         Lectures,
